@@ -1,5 +1,7 @@
 const EventEmitter = require('events');
 
+// class
+
 const ChatApp = class ChatApp extends EventEmitter {
   /**
    * @param {String} title
@@ -20,6 +22,8 @@ const ChatApp = class ChatApp extends EventEmitter {
   }
 }
 
+// listeners
+
 const chatOnMessage = (message) => {
   console.log(message);
 };
@@ -33,6 +37,7 @@ const chatOnClose = (message) => {
   console.log(message);
 };
 
+// exports
 
 module.exports.ChatApp = ChatApp;
 module.exports.chatOnMessage = chatOnMessage;
